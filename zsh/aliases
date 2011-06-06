@@ -35,5 +35,8 @@ alias crx='cd ~/Library/"Application Support"/Google/Chrome/Default/Extensions'
 # commands starting with % for pasting from web
 alias %=' '
 
+# mongodb
+alias ms='mongod --dbpath /tmp/mongo/data/'
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
