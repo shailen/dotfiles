@@ -205,3 +205,10 @@ function! OpenURL()
 endfunction
 map <Leader>w :call OpenURL()<CR>
 
+if has("mouse")
+  set mouse=a
+  set mousehide
+endif
+
+call pathogen#infect()
+
