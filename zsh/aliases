@@ -13,6 +13,7 @@ alias gp='git push'
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
+alias gcam='git commit -am'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
@@ -28,9 +29,6 @@ alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 
-#extension development
-alias crx='cd ~/Library/"Application Support"/Google/Chrome/Default/Extensions'
-
 # commands starting with % for pasting from web
 alias %=' '
 
@@ -38,4 +36,3 @@ alias %=' '
 alias ms='mongod --dbpath /tmp/mongo/data/'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
