@@ -2,3 +2,6 @@
 .svn
 *~
 .*.swp
+.rvmrc
+.sass-cache
+.sass-cache/**/*

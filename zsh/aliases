@@ -1,11 +1,24 @@
 # cd
 alias ..='cd ..'
+alias hack='cd ~/workspace/ && cd'
 
 # ls
 alias ls="ls -F"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
+
+#rvm
+alias rvmrc-create='rvm --rvmrc --create'
+alias rvmrc-reload='. ./.rvmrc'
+
+# editing and reloading aliases
+alias reload-aliases='. ~/.dotfiles/zsh/aliases'
+alias edit-aliases='vi ~/.dotfiles/zsh/aliases'
+alias reload-config='. ~/.dotfiles/zsh/config'
+alias edit-config='vi ~/.dotfiles/zsh/config'
+alias reload-local='. ~/.localrc'
+alias edit-local='vi ~/.localrc'
 
 # git
 alias gl='git pull'
@@ -19,6 +32,7 @@ alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+alias git='hub' #make sure to brew install hub
 
 # rails
 alias ss='script/server'
@@ -28,6 +42,8 @@ alias tlog='tail -f log/development.log'
 alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
+alias bi='bundle install'
+alias respork='touch config/application.rb'
 
 # commands starting with % for pasting from web
 alias %=' '
