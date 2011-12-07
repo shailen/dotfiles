@@ -6,3 +6,4 @@
 .sass-cache
 .sass-cache/**/*
 .notes.local
+.notes.md
