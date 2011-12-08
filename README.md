@@ -4,13 +4,13 @@
 
 ### who is your daddy and what does he do?
 
-these things are hav configs:
-  * zsh
-  * vim
-  * git
-  * ruby
-  * rails
-  * tmux
-  * siege
-  * macvim
-  * brew
+oh hai want the configs:
+*  zsh
+*  vim
+*  git
+*  ruby
+*  rails
+*  tmux
+*  siege
+*  macvim
+*  brew
