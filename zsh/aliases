@@ -5,7 +5,7 @@ alias hack='cd ~/workspace/ && cd'
 # ls
 alias ls="ls -F"
 alias l="ls -lAh"
-alias ll="ls -l"
+alias ll="ls -la"
 alias la='ls -A'
 
 #rvm
@@ -54,4 +54,3 @@ alias $=' ' #and from bash
 # mongodb
 alias ms='mongod --dbpath /tmp/mongo/data/'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

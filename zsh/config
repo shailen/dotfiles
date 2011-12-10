@@ -1,8 +1,5 @@
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
-else
-  export PS1='%3~$(git_info_for_prompt)%# '
-fi
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export EDITOR='mvim -f'
 export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
