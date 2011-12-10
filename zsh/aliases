@@ -47,6 +47,9 @@ alias rst='touch tmp/restart.txt'
 alias bi='bundle install'
 alias respork='touch config/application.rb'
 
+#vi
+alias vi=vim
+
 # commands starting with % for pasting from web
 alias %=' '
 alias $=' ' #and from bash

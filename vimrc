@@ -1,5 +1,7 @@
 set nocompatible
 
+call pathogen#infect()
+
 set number
 set ruler
 syntax on
@@ -36,10 +38,6 @@ set noequalalways
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
-
-" CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-map <C-\> :tnext<CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -89,11 +87,11 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Unimpaired configuration
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nmap <C-k> [e
+nmap <C-j> ]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vmap <C-k> [egv
+vmap <C-j> ]egv
 
 " Use modeline overrides
 set modeline
