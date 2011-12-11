@@ -16,6 +16,10 @@ endif
 
 syntax on
 
+" Key timeouts a for super spaz
+set ttimeout
+set ttimeoutlen=100
+
 " Set encoding
 set encoding=utf-8
 
