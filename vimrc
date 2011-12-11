@@ -17,8 +17,7 @@ endif
 syntax on
 
 " Key timeouts a for super spaz
-set ttimeout
-set ttimeoutlen=100
+set ttimeoutlen=50
 
 " Set encoding
 set encoding=utf-8
@@ -123,6 +122,10 @@ nmap <C-j> ]e
 " Bubble multiple lines
 vmap <C-k> [egv
 vmap <C-j> ]egv
+
+" Enable TAB indent and SHIFT-TAB unindent in visual mode
+vnoremap <silent> <TAB> >gv
+vnoremap <silent> <S-TAB> <gv
 
 " Use modeline overrides
 set modeline
