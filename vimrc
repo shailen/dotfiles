@@ -77,6 +77,11 @@ let g:CommandTMaxHeight=30
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
 
+" Tabular configuration and shortcuts
+map <Leader>a :Tabularize /
+" Repeat it
+map <Leader>A :Tabularize<CR>
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
