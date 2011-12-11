@@ -163,12 +163,6 @@ imap <Tab> <C-N>
 " Hashrocket! L => LAZER
 imap <C-L> <Space>=><Space>
 
-" Function key based system copy and paste
-nmap <F1> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-imap <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-nmap <F2> :.w !pbcopy<CR><CR>
-vmap <F2> :w !pbcopy<CR><CR>
-
 " Use the damn hjkl keys
 noremap <up> <nop>
 noremap <down> <nop>
