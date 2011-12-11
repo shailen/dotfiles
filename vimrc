@@ -189,11 +189,18 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
+" better window jumping
+map <S-j> <C-w>j
+map <S-k> <C-w>k
+map <S-h> <C-w>h
+map <S-l> <C-w>l
+
 " dont move backwards on escape
 inoremap <Esc> <Esc>`^
 
 " automatic esc, really uncommon to type jj,jk
 inoremap jk <ESC>`^
+inoremap kj <ESC>`^
 
 " OH MY ZSH!
 set shell=zsh
