@@ -77,9 +77,6 @@ let g:CommandTMaxHeight=30
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
 
-" Allow windows to get fully squashed
-set winminheight=0
-
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
@@ -89,11 +86,6 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
-
-" Wrapping related settings
-set wrap
-set wrapmargin=2
-set textwidth=72
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
@@ -130,9 +122,6 @@ vmap <C-j> ]egv
 " Use modeline overrides
 set modeline
 set modelines=10
-
-" Go 256 colors
-set t_Co=256
 
 " No swappy swappies
 set noswapfile
