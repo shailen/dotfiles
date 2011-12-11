@@ -4,8 +4,8 @@ alias hack='cd ~/workspace/ && cd'
 
 # ls
 alias ls="ls -F"
-alias l="ls -lAh"
-alias ll="ls -la"
+alias l="ls"
+alias ll="ls -lah"
 alias la='ls -A'
 
 #rvm
@@ -31,8 +31,10 @@ alias gcam='git commit -am'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
-alias gaa='git add . && gs'
+alias gaa='git add . && git add . -u && gs'
+alias gaad='git add . && git add . -u && gdc'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gdfstat="git diff-files --stat"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 alias git='hub' #make sure to brew install hub
 

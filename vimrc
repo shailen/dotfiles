@@ -175,9 +175,6 @@ map <S-k> <C-w>k
 map <S-h> <C-w>h
 map <S-l> <C-w>l
 
-" don't move backwards on escape
-inoremap <Esc> <Esc>`^
-
 " do the same for the much faster C-c
 " And quiet it down when hit in command mode
 inoremap <C-c> <C-c>`^
