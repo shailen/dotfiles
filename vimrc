@@ -77,6 +77,9 @@ let g:CommandTMaxHeight=30
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
 
+" Allow windows to get fully squashed
+set winminheight=0
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
@@ -146,8 +149,12 @@ set showcmd
 
 " Control s for saving
 " In Mac OSX remember to turn off trapping C-s
-nmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>
+nmap <C-w> :w<CR>
+imap <C-w> <Esc>:w<CR>
+
+" And a correlary for closing
+nmap <C-q> :wq<CR>
+imap <C-q> <Esc>:wq<CR>
 
 " Easy tab switching
 noremap <M-j> gT
@@ -191,6 +198,11 @@ inoremap <Esc> <Esc>`^
 " automatic esc, really uncommon to type jj,jk
 inoremap jk <ESC>`^
 inoremap kj <ESC>`^
+
+" do the same for the much faster C-c
+" And quiet it down when hit in command mode
+inoremap <C-c> <C-c>`^
+map <C-c> <nop>
 
 " OH MY ZSH!
 set shell=zsh
