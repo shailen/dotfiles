@@ -50,6 +50,7 @@ alias guard='guard' #weird zsh autocorrect issue
 
 # alias vi to vim
 alias vi=vim
+alias virc='vim ~/.vimrc'
 
 # commands starting with % for pasting from web
 alias %=' '
