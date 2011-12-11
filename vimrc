@@ -9,6 +9,11 @@ set ruler
 " keep undo history for background buffers
 set hidden
 
+" Use Ack instead of Grep when available
+if executable("ack")
+  set grepprg=ack\ -H\ --nogroup\ --nocolor
+endif
+
 syntax on
 
 " Set encoding
@@ -41,13 +46,13 @@ set smartcase
 " Tab completion
 set wildmenu
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/cache/**/*,tmp/**
 
 " Status bar
 set laststatus=2
 
 " scrolloff
-set scrolloff=3
+set scrolloff=8
 
 " scroll faster
 nnoremap <C-e> 3<C-e>
@@ -60,8 +65,9 @@ set shortmess=atI
 set visualbell
 
 " Command-T
-let g:CommandTMaxHeight=20
-map <Leader>t :CommandT<CR>
+" If Command-T is slow as <Leader>t, make sure that nothing is bound
+" to <Leader>t* or it'll appear slow
+let g:CommandTMaxHeight=30
 
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
@@ -111,7 +117,7 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Opens a tab edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
@@ -129,8 +135,15 @@ vmap <C-j> ]egv
 set modeline
 set modelines=10
 
+" Go 256 colors
+set t_Co=256
+
+" No swappy swappies
+set noswapfile
+
 " Default color scheme
-" color desert
+color molokai
+
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
@@ -152,24 +165,12 @@ if has("mouse")
 endif
 
 " Hide search highlighting
-map <Leader>h :set invhls <CR>
-
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>h :let @/ = ""<CR>
 
 " Maps autocomplete to tab
 imap <Tab> <C-N>
 
-" Hashrocket!
+" Hashrocket! L => LAZER
 imap <C-L> <Space>=><Space>
 
 " Function key based system copy and paste
@@ -184,8 +185,11 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
+" dont move backwards on escape
+inoremap <Esc> <Esc>`^
+
 " automatic esc, really uncommon to type jj,jk
-inoremap jj <ESC>
+inoremap jj <ESC>`^
 
 " OH MY ZSH!
 set shell=zsh

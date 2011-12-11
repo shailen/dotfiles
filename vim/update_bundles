@@ -22,9 +22,9 @@ git_bundles = [
   "git://github.com/tsaleh/vim-tmux.git",
   "git://github.com/vim-ruby/vim-ruby.git",
   "git://github.com/vim-scripts/Gist.vim.git",
-  "git://github.com/tsaleh/vim-align.git",
   "git://github.com/briancollins/vim-jst.git",
   "git://github.com/wincent/Command-T.git",
+  "git://github.com/nelstrom/vim-markdown-preview.git",
 ]
 
 vim_org_scripts = [

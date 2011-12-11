@@ -48,6 +48,9 @@ alias bi='bundle install'
 alias respork='touch config/application.rb'
 alias guard='guard' #weird zsh autocorrect issue
 
+# alias vi to vim
+alias vi=vim
+
 # commands starting with % for pasting from web
 alias %=' '
 alias $=' ' #and from bash
