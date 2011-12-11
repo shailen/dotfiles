@@ -189,7 +189,7 @@ noremap <right> <nop>
 inoremap <Esc> <Esc>`^
 
 " automatic esc, really uncommon to type jj,jk
-inoremap jj <ESC>`^
+inoremap jk <ESC>`^
 
 " OH MY ZSH!
 set shell=zsh
