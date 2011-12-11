@@ -149,8 +149,8 @@ set showcmd
 
 " Control s for saving
 " In Mac OSX remember to turn off trapping C-s
-nmap <C-w> :w<CR>
-imap <C-w> <Esc>:w<CR>
+nmap <C-s> :w<CR>
+imap <C-s> <Esc>:w<CR>
 
 " And a correlary for closing
 nmap <C-q> :wq<CR>
@@ -192,12 +192,8 @@ map <S-k> <C-w>k
 map <S-h> <C-w>h
 map <S-l> <C-w>l
 
-" dont move backwards on escape
+" don't move backwards on escape
 inoremap <Esc> <Esc>`^
-
-" automatic esc, really uncommon to type jj,jk
-inoremap jk <ESC>`^
-inoremap kj <ESC>`^
 
 " do the same for the much faster C-c
 " And quiet it down when hit in command mode
