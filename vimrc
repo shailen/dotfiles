@@ -59,6 +59,14 @@ set shortmess=atI
 " dont annoy everybody
 set visualbell
 
+" Command-T
+let g:CommandTMaxHeight=20
+map <Leader>t :CommandT<CR>
+
+" CTags
+map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+map <C-\> :tnext<CR>
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
@@ -130,9 +138,11 @@ set directory=~/.vim/backup
 " Show (partial) command in the status line
 set showcmd
 
+" Control s for saving
 nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
 
+" Easy tab switching
 noremap <M-j> gT
 noremap <M-k> gt
 
@@ -159,8 +169,10 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 " Maps autocomplete to tab
 imap <Tab> <C-N>
 
+" Hashrocket!
 imap <C-L> <Space>=><Space>
 
+" Function key based system copy and paste
 nmap <F1> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 imap <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nmap <F2> :.w !pbcopy<CR><CR>
@@ -175,6 +187,5 @@ noremap <right> <nop>
 " automatic esc, really uncommon to type jj,jk
 inoremap jj <ESC>
 
+" OH MY ZSH!
 set shell=zsh
-
-set viminfo+=!

@@ -46,9 +46,7 @@ alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 alias bi='bundle install'
 alias respork='touch config/application.rb'
-
-#vi
-alias vi=vim
+alias guard='guard' #weird zsh autocorrect issue
 
 # commands starting with % for pasting from web
 alias %=' '
@@ -57,3 +55,5 @@ alias $=' ' #and from bash
 # mongodb
 alias ms='mongod --dbpath /tmp/mongo/data/'
 
+# osx
+alias myip='ifconfig | egrep "([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)"'
