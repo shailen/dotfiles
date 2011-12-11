@@ -1,13 +1,28 @@
 set nocompatible
 
 call pathogen#infect()
+call pathogen#helptags()
 
 set number
 set ruler
+
+" keep undo history for background buffers
+set hidden
+
 syntax on
 
 " Set encoding
 set encoding=utf-8
+
+" keymaps
+nnoremap ' `
+nnoremap ` '
+
+" mapleader
+let mapleader=","
+
+" history
+set history=1000
 
 " Whitespace stuff
 set nowrap
@@ -24,16 +39,25 @@ set ignorecase
 set smartcase
 
 " Tab completion
+set wildmenu
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Status bar
 set laststatus=2
 
-" Without setting this, ZoomWin restores windows in a way that causes
-" equalalways behavior to be triggered the next time CommandT is used.
-" This is likely a bludgeon to solve some other issue, but it works
-set noequalalways
+" scrolloff
+set scrolloff=3
+
+" scroll faster
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+" less annoying command prompt
+set shortmess=atI
+
+" dont annoy everybody
+set visualbell
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
