@@ -87,16 +87,10 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-function s:setupWrapping()
-  set wrap
-  set wrapmargin=2
-  set textwidth=72
-endfunction
-
-function s:setupMarkup()
-  call s:setupWrapping()
-  map <buffer> <Leader>p :Hammer<CR>
-endfunction
+" Wrapping related settings
+set wrap
+set wrapmargin=2
+set textwidth=72
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
@@ -156,8 +150,9 @@ set directory=~/.vim/backup
 set showcmd
 
 " Control s for saving
+" In Mac OSX remember to turn off trapping C-s
 nmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>a
+imap <C-s> <Esc>:w<CR>
 
 " Easy tab switching
 noremap <M-j> gT
