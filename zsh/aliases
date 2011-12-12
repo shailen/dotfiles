@@ -37,6 +37,9 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gdfstat="git diff-files --stat"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 alias git='hub' #make sure to brew install hub
+alias gpdm='git push demo master'
+alias gppm='git push production master'
+alias gpa='git push &&'
 
 # rails
 alias ss='script/server'

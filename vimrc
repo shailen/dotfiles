@@ -90,9 +90,11 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
-
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+
+" Coffeescript folding
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
