@@ -186,7 +186,8 @@ map <S-l> <C-w>l
 " do the same for the much faster C-c
 " And quiet it down when hit in command mode
 inoremap <C-c> <C-c>`^
-map <C-c> <nop>
+vmap <C-c> <ESC>`^
+nmap <C-c> <nop>
 
 " OH MY ZSH!
 set shell=zsh
