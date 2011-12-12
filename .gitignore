@@ -1,6 +1,4 @@
 vim/.netrwhist
 vim/.VimballRecord
-.idea
-.idea/*
-vim/backup/*
 vim/bundle/*
+!vim/bundle/.gitkeep
