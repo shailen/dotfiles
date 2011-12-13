@@ -187,12 +187,12 @@ map <S-l> <C-w>l
 
 " do the same for the much faster C-c
 " And quiet it down when hit in command mode
-imap <C-c> <C-c>`^
+inoremap <C-c> <C-c>`^
 vmap <C-c> <ESC>`^
 nmap <C-c> <nop>
 
-vmap  <F2> <C-c>
-imap  <F2> <C-c>
+vnoremap  <F2> <C-c>`^
+inoremap  <F2> <C-c>`^
 
 " OH MY ZSH!
 set shell=zsh
