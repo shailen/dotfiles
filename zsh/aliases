@@ -12,13 +12,13 @@ alias la='ls -A'
 alias rvmrc-create='rvm --rvmrc --create'
 alias rvmrc-reload='. ./.rvmrc'
 
-# editing and reloading aliases
-alias reload-aliases='. ~/.dotfiles/zsh/aliases'
-alias edit-aliases='vi ~/.dotfiles/zsh/aliases'
-alias reload-config='. ~/.dotfiles/zsh/config'
-alias edit-config='vi ~/.dotfiles/zsh/config'
-alias reload-local='. ~/.localrc'
-alias edit-local='vi ~/.localrc'
+# common files
+alias -g zrc='~/.dotfiles/zshrc'
+alias -g ozrc='~/.oh-my-zsh/oh-my-zsh.sh'
+alias -g vimrc='~/.vimrc'
+alias -g als='~/.dotfiles/zsh/aliases'
+alias -g cfg='~/.dotfiles/zsh/config'
+alias -g lcl='~/.localrc'
 
 # git
 alias gl='git pull'
@@ -44,7 +44,6 @@ alias gpa='git push &&'
 # rails
 alias ss='script/server'
 alias sg='script/generate'
-alias a='autotest -rails'
 alias tlog='tail -f log/development.log'
 alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
@@ -55,7 +54,6 @@ alias guard='guard' #weird zsh autocorrect issue
 
 # alias vi to vim
 alias vi=vim
-alias virc='vim ~/.vimrc'
 
 # commands starting with % for pasting from web
 alias %=' '
