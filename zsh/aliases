@@ -41,6 +41,9 @@ alias gpdm='git push demo master'
 alias gppm='git push production master'
 alias gpa='git push &&'
 
+# grep
+alias -g pg='| grep '
+
 # rails
 alias ss='script/server'
 alias sg='script/generate'
