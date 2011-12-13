@@ -8,3 +8,6 @@ install mercurial
 compile vim with ruby
 
 install tmuxinator
+
+install PCKeyboard Hack
+map caps lock to ctrl
