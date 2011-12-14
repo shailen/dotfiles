@@ -191,5 +191,8 @@ inoremap <C-c> <C-c>`^
 vmap <C-c> <ESC>`^
 nmap <C-c> <nop>
 
+vnoremap  <F2> <C-c>`^
+inoremap  <F2> <C-c>`^
+
 " OH MY ZSH!
 set shell=zsh

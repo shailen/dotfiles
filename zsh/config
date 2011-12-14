@@ -1,5 +1,6 @@
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
 export EDITOR='vim'
 export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
@@ -15,25 +16,24 @@ HISTSIZE=1000
 SAVEHIST=1000
 REPORTTIME=10 # print elapsed time when more than 10 seconds
 
-setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
 setopt NO_LIST_BEEP
+setopt NO_BG_NICE    # don't nice background tasks
 setopt LOCAL_OPTIONS # allow functions to have local options
-setopt LOCAL_TRAPS # allow functions to have local traps
-setopt HIST_VERIFY
-
-unsetopt SHARE_HISTORY # dont share history between sessions
-setopt EXTENDED_HISTORY # add timestamps to history
+setopt LOCAL_TRAPS   # allow functions to have local traps
 
 setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
 
-setopt APPEND_HISTORY # adds history
-setopt INC_APPEND_HISTORY # adds history incrementally and share it across sessions
-setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
-setopt HIST_REDUCE_BLANKS
+setopt EXTENDED_HISTORY   # add timestamps to history
+setopt INC_APPEND_HISTORY # adds history after each command, not after shell is killed
+unsetopt SHARE_HISTORY    # dont share history between sessions
+
+setopt HIST_VERIFY          # don't execute
+setopt HIST_IGNORE_ALL_DUPS # don't record dupes in history
+setopt HIST_REDUCE_BLANKS   # i.e. when you just hit <CR> or <SPACE><CR>
 
 zle -N newtab
 

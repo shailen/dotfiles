@@ -15,7 +15,7 @@ alias rvmrc-reload='. ./.rvmrc'
 # common files
 alias -g zrc='~/.dotfiles/zshrc'
 alias -g ozrc='~/.oh-my-zsh/oh-my-zsh.sh'
-alias -g vimrc='~/.vimrc'
+alias -g vrc='~/.vimrc'
 alias -g als='~/.dotfiles/zsh/aliases'
 alias -g cfg='~/.dotfiles/zsh/config'
 alias -g lcl='~/.localrc'
@@ -41,6 +41,10 @@ alias gpdm='git push demo master'
 alias gppm='git push production master'
 alias gpa='git push &&'
 alias glately='git diff "@{yesterday}" | wc -c'
+
+# grep
+alias -g pg='| grep '
+
 # rails
 alias ss='script/server'
 alias sg='script/generate'
