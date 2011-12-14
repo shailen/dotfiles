@@ -20,6 +20,9 @@ alias -g als='~/.dotfiles/zsh/aliases'
 alias -g cfg='~/.dotfiles/zsh/config'
 alias -g lcl='~/.localrc'
 
+#common directories
+alias -g dot='~/.dotfiles'
+
 # git
 alias gl='git pull'
 alias gp='git push'
