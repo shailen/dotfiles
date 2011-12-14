@@ -11,6 +11,7 @@ alias la='ls -A'
 #rvm
 alias rvmrc-create='rvm --rvmrc --create'
 alias rvmrc-reload='. ./.rvmrc'
+alias curvm='rvm info | grep GEM_HOME:'
 
 # common files
 alias -g zrc='~/.dotfiles/zshrc'
@@ -61,6 +62,9 @@ alias guard='guard' #weird zsh autocorrect issue
 
 # alias vi to vim
 alias vi=vim
+
+# tmux
+alias -g tcfg='~/.tmux.conf'
 
 # commands starting with % for pasting from web
 alias %=' '
