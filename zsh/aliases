@@ -40,7 +40,7 @@ alias git='hub' #make sure to brew install hub
 alias gpdm='git push demo master'
 alias gppm='git push production master'
 alias gpa='git push &&'
-
+alias glately='git diff "@{yesterday}" | wc -c'
 # rails
 alias ss='script/server'
 alias sg='script/generate'
