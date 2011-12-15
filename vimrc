@@ -194,5 +194,11 @@ nmap <C-c> <nop>
 vnoremap  <F2> <C-c>`^
 inoremap  <F2> <C-c>`^
 
+" sorting with a leader
+vmap <Leader>s :!sort<CR>
+
+" reload vimrc
+nmap <Leader>r :source ~/.vimrc<CR>
+
 " OH MY ZSH!
 set shell=zsh

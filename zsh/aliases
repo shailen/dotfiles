@@ -19,7 +19,7 @@ alias -g ozrc='~/.oh-my-zsh/oh-my-zsh.sh'
 alias -g vrc='~/.vimrc'
 alias -g als='~/.dotfiles/zsh/aliases'
 alias -g cfg='~/.dotfiles/zsh/config'
-alias -g lcl='~/.localrc'
+alias -g lrc='~/.localrc'
 
 #common directories
 alias -g dot='~/.dotfiles'
@@ -65,6 +65,7 @@ alias vi=vim
 
 # tmux
 alias -g tcfg='~/.tmux.conf'
+alias -g dmux='~/.tmuxinator'
 
 # commands starting with % for pasting from web
 alias %=' '
