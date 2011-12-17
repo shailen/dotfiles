@@ -8,9 +8,6 @@ export JRUBY_INVOCATION="$(readlink "$(which celerity_jruby)")"
 
 autoload -U ~/.zsh/functions/*(:t)
 
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
 REPORTTIME=10 # print elapsed time when more than 10 seconds
 
 setopt NO_HUP
@@ -31,8 +28,6 @@ unsetopt SHARE_HISTORY    # dont share history between sessions
 setopt HIST_VERIFY          # don't execute
 setopt HIST_IGNORE_ALL_DUPS # don't record dupes in history
 setopt HIST_REDUCE_BLANKS   # i.e. when you just hit <CR> or <SPACE><CR>
-
-zle -N newtab
 
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word

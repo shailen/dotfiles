@@ -180,10 +180,10 @@ noremap <left> <nop>
 noremap <right> <nop>
 
 " better window jumping
-map <S-j> <C-w>j
-map <S-k> <C-w>k
-map <S-h> <C-w>h
-map <S-l> <C-w>l
+nmap <S-j> <C-w>j
+nmap <S-k> <C-w>k
+nmap <S-h> <C-w>h
+nmap <S-l> <C-w>l
 
 " do the same for the much faster C-c
 " And quiet it down when hit in command mode
