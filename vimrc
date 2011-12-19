@@ -49,7 +49,7 @@ set smartcase
 " Tab completion
 set wildmenu
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/cache/**/*,tmp/**
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/cache/**/*,tmp/**,public/system/**/*
 
 " Status bar
 set laststatus=2
@@ -71,6 +71,13 @@ set visualbell
 " If Command-T is slow as <Leader>t, make sure that nothing is bound
 " to <Leader>t* or it'll appear slow
 let g:CommandTMaxHeight=30
+
+" flush the command T cache on focus or save
+augroup CommandTExtension
+  autocmd!
+  autocmd FocusGained * CommandTFlush
+  autocmd BufWritePost * CommandTFlush
+augroup END
 
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
@@ -124,6 +131,10 @@ nmap <C-j> ]e
 " Bubble multiple lines
 vmap <C-k> [egv
 vmap <C-j> ]egv
+
+" each access to bol and eol
+nmap <C-h> ^
+nmap <C-l> $
 
 " Enable TAB indent and SHIFT-TAB unindent in visual mode
 vnoremap <silent> <TAB> >gv
@@ -193,6 +204,7 @@ nmap <C-c> <nop>
 
 vnoremap  <F2> <C-c>`^
 inoremap  <F2> <C-c>`^
+cnoremap  <F2> <C-c>
 
 " sorting with a leader
 vmap <Leader>s :!sort<CR>
