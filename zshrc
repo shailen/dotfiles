@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="dzello"
 
 # Set to this to use case-sensitive completion
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
@@ -34,9 +34,13 @@ export PATH=/Users/dzello/bin:/Users/dzello/.bin:/usr/local/homebrew/bin:/usr/lo
 # turn off c-s and c-q traps in iTerm/Terminal.app
 stty -ixon -ixoff
 
-. ~/.zsh/config
 . ~/.zsh/aliases
 . ~/.zsh/completion
 
 # use .localrc for settings specific to one system
 [[ -f ~/.localrc ]] && . ~/.localrc
+
+. ~/.zsh/config
+
+# double loading because of the tmux thing - hack for now
+[[ -f ./.rvmrc ]] && . ./.rvmrc

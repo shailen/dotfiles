@@ -73,7 +73,8 @@ alias %=' '
 alias $=' ' #and from bash
 
 # processes
-alias -g paux="ps -ef | grep"
+alias -g paux="ps -ef"
+alias -g psgr="ps -ef | grep"
 
 # rails project navigation
 alias pjs="cd app/assets/javascripts/"
