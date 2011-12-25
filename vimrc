@@ -155,6 +155,7 @@ set noswapfile
 " Default color scheme
 set background=dark
 color solarized
+call togglebg#map("<F5>")
 
 " Directories for swp files
 set backupdir=~/.vim/backup
