@@ -153,7 +153,8 @@ set modelines=10
 set noswapfile
 
 " Default color scheme
-" color molokai
+set background=dark
+color solarized
 
 " Directories for swp files
 set backupdir=~/.vim/backup
