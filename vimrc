@@ -133,8 +133,13 @@ vmap <C-k> [egv
 vmap <C-j> ]egv
 
 " each access to bol and eol
+imap <C-h> <C-c>^ii
 nmap <C-h> ^
+vmap <C-h> ^
+
+imap <C-l> <C-c>$i
 nmap <C-l> $
+vmap <C-l> $
 
 " Enable TAB indent and SHIFT-TAB unindent in visual mode
 vnoremap <silent> <TAB> >gv
@@ -148,7 +153,7 @@ set modelines=10
 set noswapfile
 
 " Default color scheme
-color molokai
+" color molokai
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -182,7 +187,7 @@ map <Leader>h :let @/ = ""<CR>
 imap <Tab> <C-N>
 
 " Hashrocket! L => LAZER
-imap <C-L> <Space>=><Space>
+imap <C-r> <Space>=><Space>
 
 " Use the damn hjkl keys
 noremap <up> <nop>

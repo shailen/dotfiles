@@ -29,6 +29,7 @@ alias -g dot='~/.dotfiles'
 alias gl='git pull'
 alias gp='git push'
 alias gd='git diff'
+alias gr='git reset'
 alias gdc='git diff --cached'
 alias gc='git commit'
 alias gca='git commit -a'
@@ -59,6 +60,8 @@ alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 alias bi='bundle install'
 alias respork='touch config/application.rb'
+alias rerspec='touch spec/spec_helper.rb'
+alias recuc='touch features/support/env.rb'
 alias guard='guard' #weird zsh autocorrect issue
 
 # alias vi to vim
@@ -79,6 +82,10 @@ alias -g psgr="ps -ef | grep"
 # rails project navigation
 alias pjs="cd app/assets/javascripts/"
 alias pjss="cd spec/javascripts/"
+
+# project specific shells
+alias eprc="vi ./.projectrc"
+alias rprc=". ./.projectrc"
 
 # mongodb
 alias ms='mongod --dbpath /tmp/mongo/data/'

@@ -27,7 +27,8 @@ git_bundles = [
   "git://github.com/nelstrom/vim-markdown-preview.git",
   "git://github.com/vim-scripts/taglist.vim",
   "git://github.com/tpope/vim-bundler.git",
-  "git://github.com/tpope/vim-rake.git"
+  "git://github.com/tpope/vim-rake.git",
+  'git://github.com/altercation/vim-colors-solarized'
 ]
 
 vim_org_scripts = [
