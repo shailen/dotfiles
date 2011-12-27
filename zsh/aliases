@@ -42,7 +42,6 @@ alias gaad='git add . && git add . -u && gdc'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gdfstat="git diff-files --stat"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
-alias git='hub' #make sure to brew install hub
 alias gpdm='git push demo master'
 alias gppm='git push production master'
 alias gpa='git push &&'
@@ -57,12 +56,14 @@ alias sg='script/generate'
 alias tlog='tail -f log/development.log'
 alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
-alias rst='touch tmp/restart.txt'
+alias ttr='touch tmp/restart.txt'
 alias bi='bundle install'
+alias be='bundle exec'
 alias respork='touch config/application.rb'
 alias rerspec='touch spec/spec_helper.rb'
 alias recuc='touch features/support/env.rb'
 alias guard='guard' #weird zsh autocorrect issue
+alias rake='noglob rake' #prevent rake foo[my_param] zsh issue
 
 # alias vi to vim
 alias vi=vim
@@ -84,8 +85,7 @@ alias pjs="cd app/assets/javascripts/"
 alias pjss="cd spec/javascripts/"
 
 # project specific shells
-alias eprc="vi ./.projectrc"
-alias rprc=". ./.projectrc"
+alias -g prc="./.projectrc"
 
 # mongodb
 alias ms='mongod --dbpath /tmp/mongo/data/'

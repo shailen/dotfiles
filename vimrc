@@ -15,6 +15,7 @@ if executable("ack")
 endif
 
 syntax on
+set autoindent
 
 " Key timeouts a for super spaz
 set ttimeoutlen=50
@@ -40,6 +41,11 @@ set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 
+" Or, when you want wrapping...
+" set wrap
+" set linebreak
+" set nolist
+
 " Searching
 set hlsearch
 set incsearch
@@ -49,7 +55,7 @@ set smartcase
 " Tab completion
 set wildmenu
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/cache/**/*,tmp/**,public/system/**/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/cache/**/*,tmp/**,public/system/**/*,log/*
 
 " Status bar
 set laststatus=2
@@ -98,10 +104,13 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile {Gemfile,Guardfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 " Coffeescript folding
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+
+" show hamlc as haml
+au BufRead,BufNewFile *.hamlc set ft=haml
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
@@ -170,8 +179,8 @@ nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>
 
 " And a correlary for closing
-nmap <C-q> :wq<CR>
-imap <C-q> <Esc>:wq<CR>
+nmap <C-q> :q<CR>
+imap <C-q> <Esc>:q<CR>
 
 " Easy tab switching
 noremap <M-j> gT
