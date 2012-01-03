@@ -11,3 +11,7 @@ install tmuxinator
 
 install PCKeyboard Hack
 map caps lock to ctrl
+
+Remove old max osx ctags
+sudo mv /usr/bin/ctags /usr/bin/ctags_orig
+
