@@ -88,6 +88,7 @@ augroup END
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
+nmap <F8> :TagbarToggle<CR>
 
 " Tabular configuration and shortcuts
 map <Leader>a :Tabularize /
@@ -232,3 +233,22 @@ nmap <Leader>r :source ~/.vimrc<CR>
 
 " OH MY ZSH!
 set shell=zsh
+
+" Add this type definition to your vimrc
+" or do
+" coffeetags --vim-conf >> <PATH TO YOUR VIMRC>
+" if you want your tags to include vars/objects do:
+" coffeetags --vim-conf --include-vars
+ let g:tagbar_type_coffee = {
+  \ 'kinds' : [
+  \   'f:functions',
+  \   'o:object'
+  \ ],
+  \ 'kind2scope' : {
+  \  'f' : 'object',
+  \   'o' : 'object'
+  \},
+  \ 'sro' : ".",
+  \ 'ctagsbin' : 'coffeetags',
+  \ 'ctagsargs' : ' ',
+  \}
