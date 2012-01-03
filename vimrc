@@ -177,10 +177,12 @@ set showcmd
 " In Mac OSX remember to turn off trapping C-s
 nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>
+vmap <C-s> <Esc>:w<CR>
 
 " And a correlary for closing
 nmap <C-q> :q<CR>
 imap <C-q> <Esc>:q<CR>
+vmap <C-q> <Esc>:q<CR>
 
 " Easy tab switching
 noremap <M-j> gT
@@ -214,13 +216,13 @@ nmap <S-l> <C-w>l
 
 " do the same for the much faster C-c
 " And quiet it down when hit in command mode
-inoremap <C-c> <C-c>`^
-vmap <C-c> <ESC>`^
+imap <C-c> <C-c>`^
 nmap <C-c> <nop>
+vmap <C-c> <ESC>
 
-vnoremap  <F2> <C-c>`^
-inoremap  <F2> <C-c>`^
-cnoremap  <F2> <C-c>
+inoremap <F2> <C-c>`^
+vmap  <F2> <C-c>
+cmap  <F2> <C-c>
 
 " sorting with a leader
 vmap <Leader>s :!sort<CR>
