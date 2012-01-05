@@ -65,6 +65,27 @@ alias recuc='touch features/support/env.rb'
 alias guard='guard' #weird zsh autocorrect issue
 alias rake='noglob rake' #prevent rake foo[my_param] zsh issue
 
+# rails 3 project navigation
+alias -g pr="$POOT"
+alias -g pc="$POOT/app/controllers"
+alias -g pm="$POOT/app/models"
+alias -g ph="$POOT/app/helpers"
+alias -g pma="$POOT/app/mailers"
+alias -g pv="$POOT/app/views"
+alias -g pjs="$POOT/app/assets/javascripts"
+alias -g pcs="$POOT/app/assets/stylesheets"
+
+alias -g pljs="$POOT/lib/assets/javascripts"
+alias -g plcs="$POOT/lib/assets/stylesheets"
+alias -g pvjs="$POOT/vendor/assets/javascripts"
+alias -g pvcs="$POOT/vendor/assets/stylesheets"
+
+alias -g psjs="$POOT/spec/javascripts"
+alias -g psm="$POOT/spec/models"
+alias -g psc="$POOT/spec/controllers"
+alias -g psr="$POOT/spec/routing"
+alias -g psu="$POOT/spec/support"
+
 # alias vi to vim
 alias vi=vim
 
@@ -79,10 +100,6 @@ alias $=' ' #and from bash
 # processes
 alias -g paux="ps -ef"
 alias -g psgr="ps -ef | grep"
-
-# rails project navigation
-alias pjs="cd app/assets/javascripts/"
-alias pjss="cd spec/javascripts/"
 
 # project specific shells
 alias -g prc="./.projectrc"
