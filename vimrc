@@ -77,6 +77,7 @@ set visualbell
 " If Command-T is slow as <Leader>t, make sure that nothing is bound
 " to <Leader>t* or it'll appear slow
 let g:CommandTMaxHeight=30
+nmap <F4> :CommandTFlush<CR>
 
 " flush the command T cache on focus or save
 augroup CommandTExtension
