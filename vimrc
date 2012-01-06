@@ -137,20 +137,17 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Unimpaired configuration
 " Bubble single lines
-nmap <C-k> [e
-nmap <C-j> ]e
+nmap <S-k> [e
+nmap <S-j> ]e
 " Bubble multiple lines
-vmap <C-k> [egv
-vmap <C-j> ]egv
+vmap <S-k> [egv
+vmap <S-j> ]egv
 
 " each access to bol and eol
-imap <C-h> <C-c>^ii
-nmap <C-h> ^
-vmap <C-h> ^
-
-imap <C-l> <C-c>$i
-nmap <C-l> $
-vmap <C-l> $
+nmap <S-h> ^
+vmap <S-h> ^
+nmap <S-l> $
+vmap <S-l> $
 
 " Enable TAB indent and SHIFT-TAB unindent in visual mode
 vnoremap <silent> <TAB> >gv
@@ -211,10 +208,10 @@ noremap <left> <nop>
 noremap <right> <nop>
 
 " better window jumping
-nmap <S-j> <C-w>j
-nmap <S-k> <C-w>k
-nmap <S-h> <C-w>h
-nmap <S-l> <C-w>l
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
 
 " do the same for the much faster C-c
 " And quiet it down when hit in command mode
