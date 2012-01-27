@@ -67,6 +67,7 @@ alias rake='noglob rake' #prevent rake foo[my_param] zsh issue
 
 # rails 3 project navigation
 alias -g pr="$POOT"
+alias -g pc="$POOT/.projectrc"
 alias -g pc="$POOT/app/controllers"
 alias -g pm="$POOT/app/models"
 alias -g ph="$POOT/app/helpers"

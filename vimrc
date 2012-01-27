@@ -73,10 +73,14 @@ set shortmess=atI
 " dont annoy everybody
 set visualbell
 
+" pasting
+nmap <Leader>po :set paste<CR>
+nmap <Leader>pp :set nopaste<CR>
+
 " Command-T
 " If Command-T is slow as <Leader>t, make sure that nothing is bound
 " to <Leader>t* or it'll appear slow
-let g:CommandTMaxHeight=30
+let g:CommandTMaxHeight=15
 nmap <F4> :CommandTFlush<CR>
 
 " flush the command T cache on focus or save
@@ -183,6 +187,11 @@ nmap <C-q> :q<CR>
 imap <C-q> <Esc>:q<CR>
 vmap <C-q> <Esc>:q<CR>
 
+" ctrl shift s for save all
+" nmap <C-S-s> :wa<CR>
+" imap <C-S-s> <Esc>:wa<CR>
+" vmap <C-S-s> <Esc>:wa<CR>
+
 " Easy tab switching
 noremap <M-j> gT
 noremap <M-k> gt
@@ -230,7 +239,7 @@ vmap <Leader>s :!sort<CR>
 nmap <Leader>r :source ~/.vimrc<CR>
 
 " OH MY ZSH!
-set shell=zsh
+set shell=/bin/zsh
 
 " Add this type definition to your vimrc
 " or do

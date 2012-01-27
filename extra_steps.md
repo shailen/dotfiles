@@ -35,3 +35,9 @@ coffee tags
 ```
   coffeetags -R -f TAGS
 
+rvm and vim
+-----------
+You're using zsh on OS X, aren't you? Move that stupid /etc/zshenv to /etc/zshrc.
+```
+  sudo mv /etc/zshenv /etc/zshrc
+
