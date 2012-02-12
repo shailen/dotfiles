@@ -41,6 +41,9 @@ set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 
+" delimit words by underscore
+set iskeyword-=_
+
 " Or, when you want wrapping...
 " set wrap
 " set linebreak

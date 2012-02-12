@@ -31,7 +31,9 @@ git_bundles = [
   "git://github.com/tpope/vim-rake.git",
   "git://github.com/tpope/vim-rvm.git",
   "git://github.com/scrooloose/syntastic.git",
-  'git://github.com/altercation/vim-colors-solarized'
+  'git://github.com/altercation/vim-colors-solarized',
+  "git://github.com/wojtekmach/vim-rename.git",
+  "git://github.com/jeffkreeftmeijer/vim-numbertoggle.git"
 ]
 
 vim_org_scripts = [
