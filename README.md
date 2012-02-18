@@ -2,14 +2,11 @@
 
 > if u want the dot fizzles of the dizl well fo shizzle my nizzle you have found the fizzles
 
-currently using:
+currently tweaked for:
 
-*  zsh
+*  zsh/oh-my-zsh
 *  vim
+*  tmux
 *  git
 *  ruby
 *  rails
-*  tmux
-*  siege
-*  macvim
-*  brew
