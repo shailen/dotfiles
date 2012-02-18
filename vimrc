@@ -213,12 +213,6 @@ imap <Tab> <C-N>
 " Hashrocket! L => LAZER
 imap <C-r> <Space>=><Space>
 
-" Use the damn hjkl keys
-noremap <up> <nop>
-noremap <down> <nop>
-noremap <left> <nop>
-noremap <right> <nop>
-
 " better window jumping
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
@@ -262,3 +256,9 @@ set shell=/bin/zsh
   \ 'ctagsbin' : 'coffeetags',
   \ 'ctagsargs' : ' ',
   \}
+
+set undofile
+set gdefault
+nnoremap ; :
+
+nnoremap <F6> :GundoToggle<CR>
